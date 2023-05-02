@@ -1,0 +1,126 @@
+body {
+    background-color: rgb(246, 201, 246);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo {
+    width: 100px;
+}
+
+.header {
+    background-color: rgb(239, 188, 239);
+    width: 100%;
+}
+
+.header nav {
+    display: flex;
+    padding: 0;
+}
+
+.btn {
+    padding-top: 40px;
+}
+
+.btn a {
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.btn a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.main {
+    padding: 50px;
+    text-align: center;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+.animation {
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    animation-name: rainbow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow {
+    from {color: red;}
+    to {color: blueviolet;}
+
+    0% {transform: scale(1);}
+    50% {transform: scale(1.25);}
+    100% {transform: scale(1);}
+}
+
+.flip {
+    background-color: transparent;
+    width: 300px;
+    height: max-content;
+    perspective: 1000px;
+    display: flex;
+    padding: 20px;
+}
+
+.flip-in {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip:hover .flip-in {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-front {
+    background-color: rgb(246, 201, 246);
+    color: black;
+}
+
+.flip-back {
+    background-color: rgb(239, 188, 239);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+footer {
+    background-color: rgb(239, 188, 239);
+    color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+}
+
+footer .logo {
+    width: 75px;
+    padding-top: 20px;
+}
+
+footer .legalWords {
+    padding-top: 10px;
+}
+
+footer .icons {
+    padding-top: 50px;
+}
